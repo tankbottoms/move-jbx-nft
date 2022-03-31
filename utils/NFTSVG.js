@@ -1,6 +1,6 @@
 export default function generateSVG(params) {
   return `
-    <svg width="290" height="290" viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="2500" height="2500" viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       ${generateSVGDefs(params)}
       ${generateSVGBorderText(
         params.quoteToken,
@@ -36,6 +36,7 @@ function btoa(string) {
 function generateSVGDefs(params) {
   return `
     <defs>
+      <style>@import url('https://ipfs.fleek.co/ipfs/QmRodGNTG8Jex8nQQwufuNi4Brb4Cqy16YBJ3CKqBYfQKP/DM_Mono.css');</style>
       <filter id="f1">
         <feImage result="p0" xlink:href="data:image/svg+xml;base64,${btoa(
           `
