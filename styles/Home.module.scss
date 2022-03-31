@@ -1,6 +1,10 @@
 .home__svg {
   // Override SVG font
   font-family: "Courier New", monospace !important;
+  svg {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 // Randomization container
