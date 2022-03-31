@@ -160,10 +160,10 @@ function generateSVGCardMantle(quoteTokenSymbol, baseTokenSymbol, feeTier) {
         <rect fill="none" x="0px" y="0px" width="290px" height="200px"></rect>
         <text y="54px" x="32px" fill="white" font-family="'DM Mono', 'Courier New', monospace" font-weight="200"
             font-size="24px">
-            PandaDAO
+            ${quoteTokenSymbol}
         </text>
         <text y="74px" x="32px" fill="white" font-family="'Courier New', monospace" font-weight="200" font-size="16px">
-            pandao.juicebox.eth
+            ${baseTokenSymbol}
         </text>
     </g>
   <rect x="16" y="16" width="258" height="258" rx="26" ry="26" fill="rgba(0,0,0,0)" stroke="rgba(255,255,255,0.2)">
