@@ -1,6 +1,6 @@
 export default function generateSVG(params) {
   return `
-    <svg width="2500" height="2500" viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width="500" height="500" viewBox="0 0 290 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       ${generateSVGDefs(params)}
       ${generateSVGBorderText(
         params.quoteToken,
@@ -36,7 +36,7 @@ function btoa(string) {
 function generateSVGDefs(params) {
   return `
     <defs>
-      <style>@import url('https://ipfs.fleek.co/ipfs/QmRodGNTG8Jex8nQQwufuNi4Brb4Cqy16YBJ3CKqBYfQKP/DM_Mono.css');</style>
+      <style>@import url('https://ipfs.fleek.co/ipfs/QmXGd97DeyZy2jXA4TvC7YRdkakmpcMwHsdNgYZFGGhXVF/Pixel.css');</style>
       <filter id="f1">
         <feImage result="p0" xlink:href="data:image/svg+xml;base64,${btoa(
           `
@@ -159,7 +159,7 @@ function generateSVGCardMantle(quoteTokenSymbol, baseTokenSymbol, feeTier) {
   return `
   <g mask="url(#fade-symbol)">
         <rect fill="none" x="0px" y="0px" width="290px" height="200px"></rect>
-        <text y="54px" x="32px" fill="white" font-family="'DM Mono', 'Courier New', monospace" font-weight="200"
+        <text y="54px" x="32px" fill="white" font-family="'Pixel', 'Courier New', monospace" font-weight="200"
             font-size="24px">
             ${quoteTokenSymbol}
         </text>
