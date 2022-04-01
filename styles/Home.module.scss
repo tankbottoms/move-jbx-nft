@@ -2,6 +2,7 @@
   // Override SVG font
   font-family: "Courier New", monospace !important;
   svg {
+    max-width: 85vw;
     width: 400px;
     height: 400px;
   }
