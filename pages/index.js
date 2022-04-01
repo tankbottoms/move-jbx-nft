@@ -129,10 +129,10 @@ export default function Home() {
       (token) => token.address != token0.address
     );
     const token1 = selectRandomItemFromArray(token0OmittedTokens);
-    setBaseTokenSymbol(token0.name);
-    setBaseToken(token0.address);
+    setBaseTokenSymbol(token1.address);
+    // setBaseToken(token0.address);
     setQuoteTokenSymbol(token1.name);
-    setBaseToken(token1.address);
+    // setBaseToken(token1.address);
   };
 
   return (
