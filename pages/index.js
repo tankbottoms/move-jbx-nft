@@ -6,21 +6,10 @@ import styles from "styles/Home.module.scss"; // Page styles
 
 // Constant: token name and address mapping
 const TOKENS = [
-  { name: "DAI", address: "0x6b175474e89094c44da98b954eedeac495271d0f" },
-  { name: "USDC", address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48" },
-  { name: "WETH", address: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2" },
-  { name: "AAVE", address: "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9" },
-  { name: "BADGER", address: "0x3472a5a71965499acd81997a54bba8d852c6e53d" },
-  { name: "COMP", address: "0xc00e94cb662c3520282e6f5717214004a7f26888" },
-  { name: "CRV", address: "0xd533a949740bb3306d119cc777fa900ba034cd52" },
-  { name: "MKR", address: "0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2" },
-  { name: "POOL", address: "0x0cec1a9154ff802e7934fc916ed7ca50bde6844e" },
-  { name: "REN", address: "0x408e41876cccdc0f92210600ef50372656052a38" },
-  { name: "SOCKS", address: "0x23b608675a2b2fb1890d3abbd85c5775c51691d5" },
-  { name: "SUSHI", address: "0x6b3595068778dd592e39a122f4f5a5cf09c90fe2" },
-  { name: "TORN", address: "0x77777feddddffc19ff86db637967013e6c6a116c" },
-  { name: "UMA", address: "0x04fa0d235c4abf4bcf4787af4cf447de572ef828" },
-  { name: "UNI", address: "0x1f9840a85d5af5bf1d1762f925bdaddc4201f984" },
+  { name: "PeaceDAO", address: "" },
+  { name: "MoveDAO", address: "" },
+  { name: "MeowsDAO", address: "" },
+  { name: "PandaDAO", address: "" },
 ];
 
 export default function Home() {
@@ -38,16 +27,18 @@ export default function Home() {
   const [color1, setColor1] = useState("abcdea");
   const [color2, setColor2] = useState("678901");
   const [color3, setColor3] = useState("fabcdf");
-  const [tickUpper, setTickUpper] = useState(3000);
-  const [tickLower, setTickLower] = useState(-1000);
+  const [tickUpper, setTickUpper] = useState(50);
+  const [tickLower, setTickLower] = useState(1);
   const [tickSpacing, setTickSpacing] = useState(60);
-  const [baseTokenSymbol, setBaseTokenSymbol] = useState("WETH");
-  const [quoteTokenSymbol, setQuoteTokenSymbol] = useState("UNI");
+  const [baseTokenSymbol, setBaseTokenSymbol] = useState(
+    "peacedao.juicebox.eth"
+  );
+  const [quoteTokenSymbol, setQuoteTokenSymbol] = useState("PeaceDAO");
   const [quoteToken, setQuoteToken] = useState(
-    "0x1234567890123456789123456789012345678901"
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   );
   const [baseToken, setBaseToken] = useState(
-    "0xabcdeabcdefabcdefabcdefabcdefabcdefabcdf"
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   );
 
   // Prepare data object
@@ -220,53 +211,53 @@ export default function Home() {
         <div>
           {[
             {
-              name: "Base Token Symbol (WETH)",
-              value: baseTokenSymbol,
-              setter: setBaseTokenSymbol,
-              number: false,
-            },
-            {
               name: "Quote Token Symbol (UNI)",
               value: quoteTokenSymbol,
               setter: setQuoteTokenSymbol,
               number: false,
             },
             {
-              name: "Base Token Address",
+              name: "Base Token Symbol (WETH)",
+              value: baseTokenSymbol,
+              setter: setBaseTokenSymbol,
+              number: false,
+            },
+            {
+              name: "Line 1",
               value: baseToken,
               setter: setBaseToken,
               number: false,
             },
             {
-              name: "Quote Token Address",
+              name: "Line 2",
               value: quoteToken,
               setter: setQuoteToken,
               number: false,
             },
             {
-              name: "Upper Tick",
+              name: "Reserved %",
               value: tickUpper,
               setter: setTickUpper,
               number: true,
             },
             {
-              name: "Lower Tick",
+              name: "Minting 0|1",
               value: tickLower,
               setter: setTickLower,
               number: true,
             },
-            {
-              name: "Tick Spacing",
-              value: tickSpacing,
-              setter: setTickSpacing,
-              number: true,
-            },
-            {
-              name: "Fee Tier",
-              value: feeTier,
-              setter: setFeeTier,
-              number: true,
-            },
+            // {
+            //   name: "Tick Spacing",
+            //   value: tickSpacing,
+            //   setter: setTickSpacing,
+            //   number: true,
+            // },
+            // {
+            //   name: "Fee Tier",
+            //   value: feeTier,
+            //   setter: setFeeTier,
+            //   number: true,
+            // },
           ].map((fields, i) => {
             return (
               <input

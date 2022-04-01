@@ -127,25 +127,25 @@ function generateSVGBorderText(
   <text text-rendering="optimizeSpeed">
       <textPath startOffset="-100%" fill="white" font-family="'Courier New', monospace" font-size="10px"
           xlink:href="#text-path-a">
-          PandaDAO is a decentralized application that allows users to.
+          ${baseToken}
           <animate additive="sum" attributeName="startOffset" from="0%" to="100%" begin="0s" dur="30s"
               repeatCount="indefinite"></animate>
       </textPath>
       <textPath startOffset="0%" fill="white" font-family="'Courier New', monospace" font-size="10px"
           xlink:href="#text-path-a">
-          PandaDAO is a decentralized application that allows users to.
+          ${baseToken}
           <animate additive="sum" attributeName="startOffset" from="0%" to="100%" begin="0s" dur="30s"
               repeatCount="indefinite"></animate>
       </textPath>
       <textPath startOffset="50%" fill="white" font-family="'Courier New', monospace" font-size="10px"
           xlink:href="#text-path-a">
-          Lorem PandaDAO is a decentralized application that allows users to.
+            ${quoteToken}
           <animate additive="sum" attributeName="startOffset" from="0%" to="100%" begin="0s" dur="30s"
               repeatCount="indefinite"></animate>
       </textPath>
       <textPath startOffset="-50%" fill="white" font-family="'Courier New', monospace" font-size="10px"
           xlink:href="#text-path-a">
-          Lorem PandaDAO is a decentralized application that allows users to.
+            ${quoteToken}
           <animate additive="sum" attributeName="startOffset" from="0%" to="100%" begin="0s" dur="30s"
               repeatCount="indefinite"></animate>
       </textPath>
@@ -335,14 +335,14 @@ function generateSVGPositionDataAndLocationCurve(
         <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
         <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
             <tspan fill="rgba(255,255,255,0.6)">Reserved: </tspan>
-            50%
+            ${Math.min(100, Math.max(0, tickUpper || 0))}%
         </text>
     </g>
     <g style="transform:translate(29px, 244px)">
         <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
         <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
             <tspan fill="rgba(255,255,255,0.6)">Minting: </tspan>
-            disabled
+            ${Number(tickLower) ? "enabled" : "disabled"}
         </text>
     </g>
     <g style="transform-origin: 75px 75px;transform: rotateZ(0deg); animation: spin 10s linear infinite;">
