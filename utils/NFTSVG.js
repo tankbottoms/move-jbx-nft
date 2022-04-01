@@ -348,7 +348,7 @@ function generateSVGPositionDataAndLocationCurve(
         </text>
     </g>
 
-    <g transform="scale(0.4) translate(175, 175)">
+    <g transform="scale(0.4) translate(160, 175)">
     ${paths[Math.floor(Math.random() * paths.length)].replace(/[\\]["]/g, '"')}
     </g>
 
