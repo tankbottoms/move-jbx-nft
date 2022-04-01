@@ -6,10 +6,9 @@ import styles from "styles/Home.module.scss"; // Page styles
 
 // Constant: token name and address mapping
 const TOKENS = [
-  { name: "PeaceDAO", address: "" },
-  { name: "MoveDAO", address: "" },
-  { name: "MeowsDAO", address: "" },
-  { name: "PandaDAO", address: "" },
+  { name: "PeaceDAO", address: "peacedao.juicebox.eth" },
+  { name: "MoveDAO", address: "movedao.juicebox.eth" },
+  { name: "PandaDAO", address: "pandadao.juicebox.eth" },
 ];
 
 export default function Home() {
@@ -211,13 +210,13 @@ export default function Home() {
         <div>
           {[
             {
-              name: "Quote Token Symbol (UNI)",
+              name: "text",
               value: quoteTokenSymbol,
               setter: setQuoteTokenSymbol,
               number: false,
             },
             {
-              name: "Base Token Symbol (WETH)",
+              name: "subtext",
               value: baseTokenSymbol,
               setter: setBaseTokenSymbol,
               number: false,
