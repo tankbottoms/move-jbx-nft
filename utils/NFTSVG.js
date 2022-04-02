@@ -324,27 +324,28 @@ function generateSVGPositionDataAndLocationCurve(
   const str3length = bytes(tickUpperStr).length + 10;
   const [xCoord, yCoord] = rangeLocation(tickLower, tickUpper);
 
+
+  // <g style="transform:translate(29px, 224px)">
+  //       <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
+  //       <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
+  //           <tspan fill="rgba(255,255,255,0.6)">Reserved: </tspan>
+  //           ${Math.min(100, Math.max(0, tickUpper || 0))}%
+  //       </text>
+  //   </g>
+  //   <g style="transform:translate(29px, 244px)">
+  //       <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
+  //       <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
+  //           <tspan fill="rgba(255,255,255,0.6)">Minting: </tspan>
+  //           ${Number(tickLower) ? "enabled" : "disabled"}
+  //       </text>
+  //   </g>
   return `
 
-  <g style="transform:translate(29px, 204px)">
-        <rect width="60.6666px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
+  <g style="transform:translate(29px, 244px)">
+        <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
         <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
-            <tspan fill="rgba(255,255,255,0.6)">ID: </tspan>
+            <tspan fill="rgba(255,255,255,0.6)">Project ID: </tspan>
             ${tokenId}
-        </text>
-    </g>
-    <g style="transform:translate(29px, 224px)">
-        <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
-        <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
-            <tspan fill="rgba(255,255,255,0.6)">Reserved: </tspan>
-            ${Math.min(100, Math.max(0, tickUpper || 0))}%
-        </text>
-    </g>
-    <g style="transform:translate(29px, 244px)">
-        <rect width="98px" height="17.3333px" rx="8px" ry="8px" fill="rgba(0,0,0,0.6)"></rect>
-        <text x="8px" y="11.333px" font-family="'Courier New', monospace" font-size="8px" fill="white">
-            <tspan fill="rgba(255,255,255,0.6)">Minting: </tspan>
-            ${Number(tickLower) ? "enabled" : "disabled"}
         </text>
     </g>
 

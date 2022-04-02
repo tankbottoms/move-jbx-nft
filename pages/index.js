@@ -22,6 +22,8 @@ export default function Home() {
   const [isRare, setIsRare] = useState(true);
   const [tokenId, setTokenId] = useState(123);
   const [feeTier, setFeeTier] = useState(0.05);
+  const [discord, setDiscord] = useState("");
+  const [twitter, setTwitter] = useState("");
   const [color0, setColor0] = useState("123456");
   const [color1, setColor1] = useState("abcdea");
   const [color2, setColor2] = useState("678901");
@@ -63,6 +65,8 @@ export default function Home() {
     y2,
     y3,
     isRare,
+    twitter,
+    discord
   };
 
   /**
@@ -245,18 +249,18 @@ export default function Home() {
               setter: setTickLower,
               number: true,
             },
-            // {
-            //   name: "Tick Spacing",
-            //   value: tickSpacing,
-            //   setter: setTickSpacing,
-            //   number: true,
-            // },
-            // {
-            //   name: "Fee Tier",
-            //   value: feeTier,
-            //   setter: setFeeTier,
-            //   number: true,
-            // },
+            {
+              name: "Twitter",
+              value: twitter,
+              setter: setTwitter,
+              number: false,
+            },
+            {
+              name: "Discord",
+              value: discord,
+              setter: setDiscord,
+              number: false,
+            },
           ].map((fields, i) => {
             return (
               <input
